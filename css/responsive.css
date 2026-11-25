@@ -1,0 +1,89 @@
+/**
+ * CINEMA RESPONSIVE MEDIA QUERIES
+ */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+  .carousel-header {
+    padding: 0 1.5rem;
+  }
+  .carousel-track {
+    padding: 1rem 1.5rem;
+  }
+  .crew-grid, .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .player-movie-meta {
+    grid-template-columns: 1fr;
+  }
+  .meta-side {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-synopsis {
+    font-size: 0.9rem;
+  }
+  .movie-card {
+    flex: 0 0 220px;
+  }
+  .poster-container {
+    height: 300px;
+  }
+  .cinema-video-player {
+    min-height: 420px;
+    padding: 2rem 1rem 4.5rem 1rem;
+  }
+  .player-center-message {
+    padding: 1.5rem 1rem;
+    margin: 0 10px;
+  }
+  .under-dev-title {
+    font-size: 1.1rem;
+  }
+  .cinema-ticket {
+    flex-direction: column;
+  }
+  .ticket-stub {
+    display: none;
+  }
+  .ticket-perforation {
+    display: none;
+  }
+  .ticket-main {
+    padding: 1.5rem;
+  }
+  .player-modal-container {
+    max-height: 96vh;
+  }
+  .player-body {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero-title {
+    font-size: 4.8rem;
+  }
+  .movie-card {
+    flex: 0 0 320px;
+  }
+  .poster-container {
+    height: 440px;
+  }
+  .cinema-video-player {
+    height: 520px;
+  }
+}

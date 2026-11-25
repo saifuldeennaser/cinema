@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cinematic Developer Portfolio & Architectural Showcase - An IMAX / Hollywood Streaming Experience." />
+  <title>CINEVERSE • The Premiere | Principal Software Architect</title>
+
+  <!-- Cinema Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+
+  <!-- Core Stylesheets (Custom Architecture, No Tailwind) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/cinema-effects.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/ticket.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND CINEMATIC CANVAS LAYERS -->
+  <canvas id="projector-canvas"></canvas>
+  <canvas id="film-grain-canvas"></canvas>
+  <div class="anamorphic-flare"></div>
+  <div class="theater-velvet-glow"></div>
+  <div class="cinema-dimmer-overlay"></div>
+
+  <!-- WIDESCREEN 2.39:1 CINEMA LETTERBOX BARS -->
+  <div class="cinema-letterbox-bar top"></div>
+  <div class="cinema-letterbox-bar bottom"></div>
+
+  <!-- ULTRA-MODERN STREAMING NAVBAR -->
+  <header class="cinema-nav">
+    <div class="container">
+      <div class="brand-wrap">
+        <a href="#hero-showcase" class="brand-logo">
+          <span class="brand-text">CINEVERSE</span>
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#hero-showcase" class="nav-link active">Now Playing</a></li>
+          <li><a href="#carousels-container" class="nav-link">Box Office Hits</a></li>
+          <li><a href="#crew-section" class="nav-link">The Cast & Crew</a></li>
+          <li><a href="#critics-section" class="nav-link">Critics Reviews</a></li>
+          <li><a href="#timeline-section" class="nav-link">Filmography</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="ctrl-btn cinema-toggle" id="cinema-mode-btn" title="Toggle Cinema Dimmed Mode">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="3"/>
+            <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
+          </svg>
+          <span>Cinema Mode</span>
+        </button>
+
+        <button class="btn btn-gold btn-sm" id="nav-vip-ticket-btn">
+          <span>🎟️ VIP Ticket</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CINEMA SHOWCASE CONTAINER -->
+  <main>
+    <!-- HERO PREMIERE MARQUEE -->
+    <section id="hero-showcase" class="hero-section"></section>
+
+    <!-- HORIZONTAL FILM REEL CAROUSELS -->
+    <div id="carousels-container"></div>
+
+    <!-- TECHNICAL CREW & CAST SECTION (CREDITS REEL) -->
+    <section id="crew-section" class="crew-section">
+      <div class="container">
+        <div class="section-marquee-title">
+          <h2>THE STARRING CAST & CREW</h2>
+          <p>Core Languages, Frameworks & Distributed Architecture</p>
+        </div>
+        <div class="crew-grid" id="crew-grid"></div>
+      </div>
+    </section>
+
+    <!-- CRITICS REVIEWS SECTION -->
+    <section id="critics-section" class="critics-section">
+      <div class="container">
+        <div class="section-marquee-title">
+          <h2>CRITICAL ACCLAIM & PRESS</h2>
+          <p>Certified Fresh Testimonials from Engineering Leaders, Architects & Directors</p>
+        </div>
+        <div class="reviews-grid" id="reviews-grid"></div>
+      </div>
+    </section>
+
+    <!-- BOX OFFICE TIMELINE & CAREER FILMOGRAPHY -->
+    <section id="timeline-section" class="timeline-section">
+      <div class="container">
+        <div class="section-marquee-title">
+          <h2>CAREER BOX OFFICE FILMOGRAPHY</h2>
+          <p>Production History, Leadership Milestones and High-Impact Releases</p>
+        </div>
+        <table class="filmography-table">
+          <thead>
+            <tr>
+              <th>Release Window</th>
+              <th>Production Title / Role</th>
+              <th>Studio / Enterprise</th>
+              <th>Box Office Verdict</th>
+              <th>Executive Overview</th>
+            </tr>
+          </thead>
+          <tbody id="filmography-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- CINEMA WATCHING ROOM / VIDEO PLAYER MODAL -->
+  <div id="movie-screening-modal" class="cinema-modal"></div>
+
+  <!-- GOLDEN VIP CINEMA TICKET (ADMIT ONE / HIRE PASS) -->
+  <div id="ticket-modal" class="ticket-modal"></div>
+
+  <!-- CINEMA FOOTER -->
+  <footer class="cinema-footer">
+    <div class="container">
+      <div class="footer-brand">CINEVERSE STUDIOS</div>
+      <p class="footer-tagline">Engineered for extreme performance, rock-solid scalability, and cinematic digital storytelling.</p>
+      <div class="footer-badges" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+        <span class="badge-imax">IMAX CERTIFIED</span>
+        <span class="badge-quality">4K ULTRA HD</span>
+        <span class="badge-rating">CANVAS VOLUMETRIC</span>
+      </div>
+      <p class="footer-credits">© 2025 Mostafa / Lead Systems Architect. All rights reserved. Built with pure Vanilla ES6+, Custom Native CSS & HTML5 Canvas.</p>
+    </div>
+  </footer>
+
+  <!-- MODULE ENTRYPOINT -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

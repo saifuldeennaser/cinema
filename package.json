@@ -1,0 +1,12 @@
+{
+  "name": "cinematic-developer-portfolio",
+  "version": "2.0.0",
+  "description": "Next-Gen Hollywood / IMAX Style Developer Portfolio Showcase - Pure Vanilla ES6+, Web Audio API, Canvas & Modern CSS",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "keywords": ["portfolio", "cinema", "showcase", "vanilla-js", "web-audio", "canvas"],
+  "author": "Creative Engineer",
+  "license": "MIT"
+}

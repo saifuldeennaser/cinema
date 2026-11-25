@@ -1,0 +1,124 @@
+/**
+ * CINEMA EFFECTS & ATMOSPHERE STYLES
+ * Volumetric Projector, 35mm Film Grain, Letterbox & Cinema Mode Dimmer.
+ */
+
+/* Background Canvas Elements */
+#projector-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity var(--transition-slow);
+}
+
+#film-grain-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+}
+
+/* Anamorphic Lens Flare Effect */
+.anamorphic-flare {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0) 20%, rgba(0, 229, 255, 0.45) 50%, rgba(0, 229, 255, 0) 80%, transparent 100%);
+  box-shadow: 0 0 40px 8px rgba(0, 229, 255, 0.3);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+/* CINEMA MODE: Dim the room and activate widescreen letterboxing */
+body.cinema-mode-active {
+  background-color: #020305;
+}
+
+/* Widescreen 2.39:1 Letterbox Bars */
+.cinema-letterbox-bar {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background-color: #000000;
+  z-index: 950;
+  pointer-events: none;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
+}
+
+.cinema-letterbox-bar.top {
+  top: 0;
+}
+
+.cinema-letterbox-bar.bottom {
+  bottom: 0;
+}
+
+body.cinema-mode-active .cinema-letterbox-bar {
+  height: 60px;
+}
+
+/* Cinema Mode Dimmer Overlay */
+.cinema-dimmer-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.cinema-mode-active .cinema-dimmer-overlay {
+  opacity: 1;
+}
+
+/* Red Velvet Theater Ambient Glow */
+.theater-velvet-glow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(229, 9, 20, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Toast Marquee Notification */
+.cinema-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(13, 18, 29, 0.94);
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px var(--gold-glow);
+  backdrop-filter: blur(12px);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 10000;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.cinema-toast.visible {
+  transform: translateX(-50%) translateY(0);
+}
